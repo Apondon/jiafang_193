@@ -1,0 +1,181 @@
+/* 引入字体图标库 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('./font/iconfont.eot');
+    src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('./font/iconfont.woff2') format('woff2'),
+        url('./font/iconfont.woff') format('woff'),
+        url('./font/iconfont.ttf') format('truetype'),
+        url('./font/iconfont.svg#iconfont') format('svg');
+}
+/* 定义使用 iconfont 的样式 */
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.flx{
+    display: flex;
+}
+/* 公共样式 */
+/* 顶栏 */
+.btnBox{
+    width: 100%;
+    height: 40px;
+    justify-content: flex-end;
+}
+.btn{
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+}
+/* logo */
+.logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 120px;
+    width: 240px;
+    background: #fff;
+    color: darkgreen;
+    /* 文字上下左右居中 */
+    text-align: center;
+    line-height: 120px;
+    font-size: 54px;
+    font-weight: 100;
+}
+/* 导航 */
+.nav{
+    background:green;
+}
+.navBox{
+    width: 100%;
+    height: 80px;
+    justify-content: flex-end;
+}
+.navItem{
+    width: 120px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-right: 1px solid #fff;
+    color:#fff;
+}
+/* 内容 */
+.contentBox{
+    justify-content: space-between;
+}
+.ctt-lt , .ctt-rt{
+    width: 570px;
+    height: 300px;
+}
+.ctt-lt{
+    background: chartreuse;
+}
+.ctt-rt{
+    background: crimson;
+}
+/* 底栏 */
+.ft{
+    width: 100%;
+    background: green;
+}
+.footerBox{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+.ftItem{
+    margin:0 5px;
+}
+/* 媒体查询 */
+
+/* pc */
+@media screen and (min-device-width:1150px){
+    .inner{
+        width: 1150px;
+        margin: auto;
+        position: relative;
+    }
+    /* banner */
+    .banner{
+        background: grey;
+    }
+    .bannerImg{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* 平板 */
+@media screen and (min-device-width:750px) and (max-device-width:1150px){
+    .inner{
+        width: 100%;
+        position: relative;
+    }
+    .md-none{
+        display: none;
+    }
+    /* banner */
+    .bannerImg{
+        width: 100%;
+    }
+    .ctt-rt{
+        flex: 1;
+    }
+}
+
+/* 手机 */
+@media screen and (max-device-width:750px){
+    .inner{
+        width: 100%;
+    }
+    .logo{
+        width: 100%;
+        height: 1.875rem;
+        position: static;
+        text-align: left;
+        text-indent: .3125rem;
+    }
+    .navBox{
+        height: 1.25rem;
+        font-size: .25rem;
+    }
+    .navItem{
+        /* width: 1.875rem; */
+        flex: 1;
+        height: 1.25rem;
+        line-height: 1.25rem;
+    }
+    .sl-none{
+        display:none !important;
+    }
+    /* banner */
+    .bannerImg{
+        width: 100%;
+    }
+    .contentBox{
+        flex-direction: column;
+    }
+    .ctt-lt , .ctt-rt{
+        width: 100%;
+    }
+    .ctt-lt{
+        background: chartreuse;
+        height: 1.875rem;
+    }
+    .ctt-rt{
+        background: crimson;
+        height: 2.8125rem;
+    }
+}
